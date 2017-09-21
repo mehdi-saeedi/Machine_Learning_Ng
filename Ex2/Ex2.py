@@ -1,4 +1,5 @@
 # whether a student gets admitted into a university.
+# Ex2 of Andrew Ng's course in Machine Learning
 
 import pandas as pd
 import matplotlib.pyplot as plt
