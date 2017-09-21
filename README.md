@@ -4,3 +4,4 @@
  * Programming Exercise 1: Linear Regression
      * Ex1: Linear regression with one variable
      * Ex1: Linear regression with multiple variables
+ * Programming Exercise 2: Logistic Regression
