@@ -8,16 +8,18 @@ import numpy as np
 from mpl_toolkits.mplot3d import Axes3D
 from matplotlib import cm
 
+
 # Cost calculation function
 def computeCost(X, y, theta):
     H = np.dot(X, theta)
-    J = 1/(2*m)*sum(pow(H-y, 2))
+    J = 1 / (2 * m) * sum(pow(H - y, 2))
     return J
+
 
 # get X & y from the input text file
 input_file = open('ex1data1.txt', 'r')
 ex1data1 = pd.read_csv(input_file).values
-X = ex1data1[:, 0].reshape(-1,1)
+X = ex1data1[:, 0].reshape(-1, 1)
 y = ex1data1[:, 1]
 
 m = len(X)
@@ -30,7 +32,7 @@ theta = np.array([0, 0])
 alpha = 0.01
 
 # linear regression
-cost_func = np.zeros((Iteration,1))
+cost_func = np.zeros((Iteration, 1))
 for i in range(0, Iteration):
     cost_func[i, 0] = computeCost(X, y, theta)
     theta = theta - alpha / m * np.dot(X.T, np.dot(X, theta) - y)
@@ -48,7 +50,7 @@ plt.show(block=False)
 
 # plot cost function vs iteration to see convergence
 plt.figure()
-x_cross = np.array([[1, 3.5],[1, 7.0]])
+x_cross = np.array([[1, 3.5], [1, 7.0]])
 y_cross = np.dot(x_cross, theta)
 cost_plt, = plt.plot(cost_func, label="Cost Function")
 plt.xlabel('Iteration')
@@ -59,8 +61,8 @@ plt.legend(handles=[cost_plt])
 theta0_values = np.arange(-10, 10, 0.2)
 theta1_values = np.arange(-1, 4, 0.05)
 J_values = np.zeros((100, 100))
-for i in range(0,100):
-    for j in range(0,100):
+for i in range(0, 100):
+    for j in range(0, 100):
         t = np.array([theta0_values[i], theta1_values[j]])
         J_values[i, j] = computeCost(X, y, t)
 
