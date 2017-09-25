@@ -16,3 +16,5 @@
  * Programming Exercise 5: Regularized Linear Regression and Bias v.s. Variance
      * Bias-variance
      * Polynomial regression
+  * Programming Exercise 6: Support Vector Machines
+     * Play with data with SVM
