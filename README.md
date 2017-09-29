@@ -18,3 +18,4 @@
      * Polynomial regression
   * Programming Exercise 6: Support Vector Machines
      * Play with data with SVM
+     * Spam Classification
